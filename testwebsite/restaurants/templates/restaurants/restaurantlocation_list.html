@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+
+{% block content %}
+<h1>Restaurant List</h1>
+<ul>
+    {% for object in object_list %}
+    <a href="/restaurants/{{ object.slug }}">
+    <li>{{ object.name }}</a><br>
+    {{ object.timestamp }},{{ object.updated }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
